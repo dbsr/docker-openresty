@@ -6,6 +6,9 @@
 FROM centos
 MAINTAINER Marco Palladino, marco@mashape.com
 
+# OpenResty version
+ENV OPENRESTY_VERSION 1.5.12.1
+
 # make sure the system is up to date
 RUN yum -y upgrade
 
@@ -13,7 +16,7 @@ RUN yum -y upgrade
 RUN yum -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel
 
 # download OpenResty
-RUN cd /tmp && wget http://openresty.org/download/ngx_openresty-1.5.12.1.tar.gz && tar xzf ngx_openresty-1.5.12.1.tar.gz
+RUN cd /tmp && wget http://openresty.org/download/ngx_openresty-$OPENRESTY_VERSION.tar.gz && tar xzf ngx_openresty-$OPENRESTY_VERSION.tar.gz
 
 # configure, build and install OpenResty
-RUN cd /tmp/ngx_openresty-1.5.12.1 && ./configure --with-luajit && make -j 2 && make install
+RUN cd /tmp/ngx_openresty-$OPENRESTY_VERSION && ./configure --with-luajit && make -j 2 && make install
