@@ -13,7 +13,7 @@ ENV OPENRESTY_VERSION 1.5.12.1
 RUN yum -y upgrade
 
 # install dependencies required to compile and build OpenResty
-RUN yum --skip-broken -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel git
+RUN yum -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel git
 
 # download OpenResty
 RUN cd /tmp && wget http://openresty.org/download/ngx_openresty-$OPENRESTY_VERSION.tar.gz && tar xzf ngx_openresty-$OPENRESTY_VERSION.tar.gz
