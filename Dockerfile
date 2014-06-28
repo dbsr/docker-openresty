@@ -10,7 +10,7 @@ MAINTAINER Marco Palladino, marco@mashape.com
 ENV OPENRESTY_VERSION 1.5.12.1
 
 # make sure the system is up to date
-# RUN yum -y upgrade
+RUN yum -y upgrade
 
 # install dependencies required to compile and build OpenResty
 RUN yum --skip-broken -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel git
