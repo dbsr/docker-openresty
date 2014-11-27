@@ -1,13 +1,13 @@
 # Openresty
 #
-# VERSION       1.5.12.1
+# VERSION       1.7.4.1
 
 # use the centos base image provided by dotCloud
 FROM centos
 MAINTAINER Marco Palladino, marco@mashape.com
 
 # OpenResty version
-ENV OPENRESTY_VERSION 1.5.12.1
+ENV OPENRESTY_VERSION 1.7.4.1
 
 # make sure the system is up to date
 RUN yum -y upgrade
