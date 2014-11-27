@@ -19,4 +19,4 @@ RUN yum -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel
 RUN cd /tmp && wget http://openresty.org/download/ngx_openresty-$OPENRESTY_VERSION.tar.gz && tar xzf ngx_openresty-$OPENRESTY_VERSION.tar.gz
 
 # configure, build and install OpenResty
-RUN cd /tmp/ngx_openresty-$OPENRESTY_VERSION && ./configure --with-luajit --with-http_realip_module  && make -j 2 && make install
+RUN cd /tmp/ngx_openresty-$OPENRESTY_VERSION && ./configure --with-luajit --with-http_realip_module  && make && make install
