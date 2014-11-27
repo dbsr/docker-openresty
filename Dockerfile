@@ -8,6 +8,7 @@ MAINTAINER Marco Palladino, marco@mashape.com
 
 # OpenResty version
 ENV OPENRESTY_VERSION 1.7.4.1
+ENV PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # make sure the system is up to date
 RUN yum -y upgrade
