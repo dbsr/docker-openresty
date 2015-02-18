@@ -6,7 +6,7 @@
 FROM centos
 MAINTAINER Marco Palladino, marco@mashape.com
 
-# OpenResty version
+# Dependencies versions
 ENV OPENRESTY_VERSION 1.7.7.2
 ENV LUAROCKS_VERSION 2.1.2
 ENV LUA_VERSION 5.1.5
@@ -15,7 +15,7 @@ ENV LUA_VERSION 5.1.5
 RUN yum -y upgrade
 
 # install dependencies required to compile and build OpenResty
-RUN yum -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel git make
+RUN yum -y install wget tar perl gcc-c++ readline-devel pcre-devel openssl-devel git make unzip
 
 # download Lua
 RUN cd /tmp && wget http://www.lua.org/ftp/lua-$LUA_VERSION.tar.gz && tar xzf lua-$LUA_VERSION.tar.gz
