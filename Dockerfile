@@ -8,7 +8,7 @@ MAINTAINER Marco Palladino, marco@mashape.com
 
 # Dependencies versions
 ENV OPENRESTY_VERSION 1.7.7.2
-ENV LUAROCKS_VERSION 2.1.2
+ENV LUAROCKS_VERSION 2.2.0
 ENV LUA_VERSION 5.1.5
 
 # make sure the system is up to date
