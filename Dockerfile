@@ -34,3 +34,5 @@ RUN cd /tmp && wget http://openresty.org/download/ngx_openresty-$OPENRESTY_VERSI
 
 # configure, build and install OpenResty
 RUN cd /tmp/ngx_openresty-$OPENRESTY_VERSION && ./configure --with-luajit --with-http_realip_module --with-pcre-jit --with-ipv6  && make && make install
+
+RUN export PATH=$PATH:/usr/local/openresty/nginx/sbin
