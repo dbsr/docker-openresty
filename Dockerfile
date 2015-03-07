@@ -1,13 +1,13 @@
 # Openresty
 #
-# VERSION       1.7.7.2
+# VERSION       1.7.10.1
 
 # use the centos base image provided by dotCloud
 FROM centos
 MAINTAINER Marco Palladino, marco@mashape.com
 
 # Dependencies versions
-ENV OPENRESTY_VERSION 1.7.7.2
+ENV OPENRESTY_VERSION 1.7.10.1
 ENV LUAROCKS_VERSION 2.2.0
 ENV LUA_VERSION 5.1.5
 
